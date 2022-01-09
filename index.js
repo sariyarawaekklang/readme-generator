@@ -1,10 +1,36 @@
-// TODO: Include packages needed for this application
+const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// questions for user input
 const questions = () => {
     return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your Github username. (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your Github Username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address. (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
+        }
+    },
     {
         type: 'input',
         name: 'name',
@@ -50,7 +76,7 @@ const questions = () => {
     {
         type: 'input',
         name: 'usage',
-        message: 'Provde instructions and example on how to use.'
+        message: 'Provide instructions on how to use your project.'
     },
     {
         type: 'input',
@@ -58,21 +84,11 @@ const questions = () => {
         message: 'Please list all of the contributors, if any, for this project. Provide their GitHub profiles as well.'
     },
     {
-        type: 'checkout',
+        type: 'checkbox',
         name: 'license',
-        message: 'Choose which of the following best describes your situation to determine a license for your project.',
-        choices: ['I need to work in a community.', 'I wanted it simple and permissive.', 'I care about sharing improvements.']
+        message: 'Choose a license for your project.',
+        choices: ['MIT', 'GNU']
     },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Enter your Github username.'
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Enter your email address.'
-    }
     {
         type: 'input',
         name: 'questions',
@@ -82,8 +98,20 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+questions()
+    .then(answers => {
+        return generateMarkdown(answers);
+    })
+/*
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err);
+        } 
+        console.log('Great job! Your README has been created!')
+    })
+};
+*/
 // TODO: Create a function to initialize app
 function init() {}
 
