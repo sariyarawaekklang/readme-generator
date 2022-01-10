@@ -59,6 +59,8 @@ THEN I am taken to the corresponding section of the README
 <iframe src="https://drive.google.com/file/d/1-4ubWM3nYh0wBLbdO2Nia_l-pU4mibjy/preview" width="640" height="480"></iframe>
 
 ## Sample README.md Generated Using Application
+![sample-readme](https://user-images.githubusercontent.com/92960373/148716812-7af5fbf3-549a-4850-adb4-53b7f0b28bd2.png)
+
 
 ## Repository URL
 https://github.com/sariyarawaekklang/readme-generator.git
