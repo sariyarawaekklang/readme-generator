@@ -102,6 +102,7 @@ questions()
     .then(answers => {
         return generateMarkdown(answers);
     })
+    
 /*
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
