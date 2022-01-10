@@ -3,29 +3,38 @@
   # Run Buddy
 
   ## Description
-  test
+  description will go here
 
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
+  * [Credits](#credits)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
+  This project was created with the following:
   HTML,CSS
 
   ## Usage
-  test
-
-  ## Credits
-  sariyarawaekklang
+  How to use this project:
+  instructions will go here
 
   ## License
-  MIT
+  The Unlicense
+
+  ## Credits
+  This project was created by:
+  contributors will go here
+
+  ## Tests
+  How to test this application:
+  undefined
 
   ## Questions
   
-  Feel free to check out my GitHub, sariyarawaekklang.
+  Feel free to check out my GitHub, https://github.com/sariyarawaekklang
+  </br>
   For more information, reach out via email at sariyarawaekklang@gmail.com for any questions.

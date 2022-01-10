@@ -56,18 +56,6 @@ const questions = () => {
         default: true
     },
     {
-        type: 'input',
-        name: 'tableContents',
-        message: 'Provide subtitles for the Table of Contents.',
-        when: ({ confirmTableContents }) => {
-            if (confirmTableContents) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    },
-    {
         type: 'checkbox',
         name: 'installation',
         message: 'What did you use to build this project? (Check all that apply)',
@@ -82,7 +70,7 @@ const questions = () => {
         type: 'checkbox',
         name: 'license',
         message: 'Choose a license for your project.',
-        choices: ['MIT', 'GNU']
+        choices: ['Apache', 'Apache 2.0', 'CC0-1.0', 'GNU', 'GNU GPL v3', 'ISC', 'MIT', 'Modzilla 2.0', 'The Unlicense']
     },
     {
         type: 'input',
@@ -110,7 +98,7 @@ const questions = () => {
     {
         type: 'input',
         name: 'questions',
-        message: 'Any questions?'
+        message: 'Any questions?',
     }
     ]);
 };

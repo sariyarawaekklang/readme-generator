@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// creates readme.md in dist directory
 function generateMarkdown(data) {
   return `
   
@@ -12,25 +13,34 @@ function generateMarkdown(data) {
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
+  * [Credits](#credits)
+  * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation
+  This project was created with the following:
   ${data.installation}
 
   ## Usage
+  How to use this project:
   ${data.usage}
-
-  ## Credits
-  ${data.credits}
 
   ## License
   ${data.license}
 
+  ## Credits
+  This project was created by:
+  ${data.credits}
+
+  ## Tests
+  How to test this application:
+  ${data.tests}
+
   ## Questions
   ${data.questions}
-  Feel free to check out my GitHub, ${data.github}.
+  Feel free to check out my GitHub, https://github.com/${data.github}
+  </br>
   For more information, reach out via email at ${data.email} for any questions.
 `;
 };
