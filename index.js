@@ -99,7 +99,7 @@ const questions = () => {
 
 // writes README file
 const writeFile = data => {
-    fs.writeFile('README.md', data, err => {
+    fs.writeFile('./dist/README.md', data, err => {
         if (err) {
             return console.log(err);
         } 
@@ -107,6 +107,7 @@ const writeFile = data => {
     })
 };
 
+// initializes program
 questions()
     .then(answers => {
         return generateMarkdown(answers);
