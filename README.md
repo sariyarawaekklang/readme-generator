@@ -59,7 +59,7 @@ THEN I am taken to the corresponding section of the README
 https://watch.screencastify.com/v/P1xk6XCXTm0D3XX0ym5i
 
 ## Sample README.md Generated Using Application
-(./assets/sample-readme.png)
+![screenshot](./assets/sample-readme.png)
 
 ## Repository URL
 https://github.com/sariyarawaekklang/readme-generator.git
