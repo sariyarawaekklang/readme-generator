@@ -79,11 +79,6 @@ const questions = () => {
         message: 'Provide instructions on how to use your project.'
     },
     {
-        type: 'input',
-        name: 'credits',
-        message: 'Please list all of the contributors, if any, for this project. Provide their GitHub profiles as well.'
-    },
-    {
         type: 'checkbox',
         name: 'license',
         message: 'Choose a license for your project.',
@@ -91,9 +86,31 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Any questions?',
+        name: 'credits',
+        message: 'Please list all of the contributors, if any, for this project. Provide their GitHub profiles as well.'
+    },
+    {
+        type: 'confirm',
+        name: 'confirmTests',
+        message: 'Are there any tests for your application?',
         default: true
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What tests are there?',
+        when: ({ confirmTests }) => {
+            if (confirmTests) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Any questions?'
     }
     ]);
 };
