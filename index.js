@@ -97,24 +97,25 @@ const questions = () => {
     ]);
 };
 
-// TODO: Create a function to write README file
-questions()
-    .then(answers => {
-        return generateMarkdown(answers);
-    })
-    
-/*
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+// writes README file
+const writeFile = data => {
+    fs.writeFile('README.md', data, err => {
         if (err) {
             return console.log(err);
         } 
         console.log('Great job! Your README has been created!')
     })
 };
-*/
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
+questions()
+    .then(answers => {
+        return generateMarkdown(answers);
+    })
+    .then(data => {
+        return writeFile(data);
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+
