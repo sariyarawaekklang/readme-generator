@@ -33,7 +33,7 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'name',
+        name: 'title',
         message: 'What is the name of your project? (Required)',
         validate: nameInput => {
             if (nameInput) {
@@ -92,7 +92,8 @@ const questions = () => {
     {
         type: 'input',
         name: 'questions',
-        message: 'Any questions? Feel free to reach out via GitHub or Email. Links will be provided below.'
+        message: 'Any questions?',
+        default: true
     }
     ]);
 };
